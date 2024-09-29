@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  
+  <title>X - Infinicube</title>
+
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka+One|Jost:400,500,600&display=swap">
+  <link rel="shortcut icon" href="https://media.discordapp.net/attachments/1286387558867144724/1287811578716098663/a6d56229b20f847ea2faf13bdcc37a4e.png?ex=66fa27be&is=66f8d63e&hm=f15479a3c3ab31f8c123238f945b78f920e9b2281de3c43b31a4b7b6c8083073&=&format=webp&quality=lossless" type="image/x-icon">
+
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .redirection-container {
+      background-color: #2c2c2c;
+      border-radius: 10px;
+      padding: 40px;
+      text-align: center;
+      width: 400px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-color: #ffffff00;
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo img {
+      width: 50px;
+    }
+
+    .redirection-text {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .timer {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #3D90F5;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      font-size: 1.2em;
+    }
+
+    h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  </style>
+
+  <script>
+    let countdown = 5;
+    const timerElement = document.getElementById('timer');
+
+    function updateTimer() {
+      if (countdown === 0) {
+        window.location.href = 'https://x.com/infinicubemc'; // Remplacez par l'URL de redirection
+      } else {
+        document.getElementById('timer').innerText = countdown;
+        countdown--;
+      }
+    }
+
+    setInterval(updateTimer, 1000);
+  </script>
+</head>
+
+<body>
+  <div class="redirection-container">
+    <div class="logo">
+      <img src="https://media.discordapp.net/attachments/1286387558867144724/1287811578716098663/a6d56229b20f847ea2faf13bdcc37a4e.png?ex=66fa27be&is=66f8d63e&hm=f15479a3c3ab31f8c123238f945b78f920e9b2281de3c43b31a4b7b6c8083073&=&format=webp&quality=lossless" alt="Logo">
+    </div>
+    
+    <h1>REDIRECTION</h1>
+    <p class="redirection-text">Vous allez être redirigé sur <b>X</b> dans quelques instants</p>
+    
+    <div class="timer" id="timer">5</div>
+  </div>
+</body>
+
+</html>
